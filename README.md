@@ -19,4 +19,4 @@ a tool, to withdraw front bytes of file, you can specify source file name, desti
 
 2)./filename means execute the file in current directory
 
-3).the last 3 informations need user to fill out
+3).the last 3 informations need user to specify
