@@ -5,6 +5,8 @@ a tool, to withdraw front bytes of file, you can specify source file name, desti
 
 2.raw is the destination file for test
 
-.c is the main program
+withdraw.c is the main program
 
-.mk is the makefile program
+withdraw.mk is the makefile program
+
+withdraw is the output file, run in linux command
