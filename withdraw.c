@@ -8,7 +8,10 @@ int main()
     unsigned char *buffer = (unsigned char *)malloc(1280*962*10);
     unsigned char srcfile[MAX_LIMIT],
          desfile[MAX_LIMIT];
+    unsigned char c;
     int number, i,numread, numwritten;
+    while(1)
+    {
     printf("input srcfilename:");
     scanf("%s", srcfile);
     printf("input desfilename:");
@@ -20,6 +23,12 @@ int main()
     scanf("%d", &number);
 
     file_pointer = fopen(srcfile, "r");
+    if(file_pointer==NULL)
+    {
+        printf("srcfile open failed, check if there is the file.\n");
+	printf("app terminate.\n");
+	break;
+    }
     printf("----read----\n");
     numread = fread( buffer, number, sizeof( unsigned char ), file_pointer );
     printf( "Number of items read = %d\n", numread );
@@ -39,5 +48,31 @@ int main()
 
     fclose(file_pointer);
     fclose(fptr);
+
+    while(1)
+    {
+        printf("continue to withdraw?y/n: ");
+        scanf(" %c", &c);
+        if(c=='n'||c=='y')
+        {
+            break;
+        }
+        else
+        {
+            printf("invalid input, please rechoice.");
+	    continue;
+        }
+    }
+    if(c=='n')
+    {
+        break;
+    }
+    else if(c=='y')
+    {
+        continue;
+    }
+   
+    }
+
     return 0;
 }
