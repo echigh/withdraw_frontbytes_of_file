@@ -20,3 +20,7 @@ a tool, to withdraw front bytes of file, you can specify source file name, desti
 2)./filename means execute the file in current directory
 
 3).the last 3 informations need user to specify
+
+new branch function:
+1.auto traverse all file in a directory
+2.you only need determine the directory name and the byte num that you need to withdraw.
